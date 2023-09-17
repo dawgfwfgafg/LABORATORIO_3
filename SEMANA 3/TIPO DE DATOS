@@ -1,0 +1,375 @@
+//TIPOS DE DATOS
+
+var nombre = "Carlos"; 
+console.log(nombre);
+
+var objecto = 1000;
+console.log(numero);
+
+var objecto = {
+nombre: "Juan",
+apellido: "Perez",
+telefono: "55443322"
+}
+console.log(objecto);
+//TIPOS DE DATOS
+
+//TIPOS DE DATOS PARTE 2
+var bandera = false;
+console.log(typeof bandera);
+
+function miFuncion(){} 
+console.log(typeof miFuncion);
+
+var simbolo = Symbol("mi simbolo"); 
+console.log(typeof simbolo);
+ 
+class Persona{
+    constructor(nombre, apellido){ 
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+}
+console.log(typeof Persona);
+
+var x;
+console.log(typeof x);
+
+x = undefined;
+console.log(typeof x);
+
+var y = null;
+console.log(typeof y);
+// TIPOS DE DATOS PARTE 2
+
+//ARREGLOS Y DATOS VACIOS
+var y = null; 
+console.log(typeof y);
+
+var autos = ['BMW', 'Audi', 'Volvo'];
+console.log(autos);
+console.log(typeof autos);
+
+var z = '';
+console.log(z);
+console.log(typeof z);
+//ARREGLOS Y DATOS VACIOS
+
+//CONCATENAR CARACTERES
+var nombre="Juan";
+var apellido ="Perez";
+
+var nombreCompleto = nombre +" "+apellido;
+console.log(nombreCompleto);
+
+var nombreCompleto2 = "Carlos" +" "+ "Lara";
+console.log(nombreCompleto2);
+
+var x= nombre + 2 + 4;
+console.log(x);
+
+var x= nombre + (2 + 4);
+console.log(x);
+
+var x= 2 + 4 + nombre;
+console.log(x);
+//CONCATENAR CARACTERES
+
+//CONCATENAR STRINGS
+let nombre;
+nombre = "Juan";
+console.log( nombre );
+
+const apellido = "Perez";
+//CONCATENAR STRINGS
+
+//REGLAS DE DECLARACION DE VARIABLES
+let nombreCompleto= "Juan Perez";
+let nombrecompleto= "Carlos Lara";
+console.log( nombreCompleto);
+console.log( nombrecompleto);
+
+let a1nombreCompleto;
+let _nombreCompleto;
+let a2nombreCompleto;
+
+let ruptura = 10;
+//REGLAS DE DECLARACION DE VARIABLES
+
+//OPERADORES ARITMETICOS
+let a = 3, b = 2;
+let z = a + b;
+console.log("Resultado de la suma" + z);
+
+z = a - b; 
+console.log("Resultado de la resta" + z);
+
+z = a*b; 
+console.log( "Resultado de la mult:" + z);
+
+z = a / b; 
+console.log( "Resultado de la division:" + z);
+
+z = a % b; //residuo de la division 
+console.log( "Resultado de operacion modulo (residuo):" + z); 
+
+z = a ** b;
+console.log( "Resultado de operador exponente:" + z);
+//OPERADORES ARITMETICOS
+
+//INCREMENTO Y DECREMENTO DE VARIABLES
+let a = 3, b = 2;
+let z = a + b;
+
+Z = ++a;
+console.log(a); 
+console.log(Z);
+
+
+z = b++;
+console.log(b); 
+console.log(z);
+
+z = --a;
+console.log(a);
+console.log(z);
+
+z = b--;
+console.log(b);
+console.log(z);
+//INCREMENTO y DECREMENTO DE VARIABLES
+
+//PRECEDENCIA DE OPERADORES
+let a = 3, b = 2, c = 1, d = 4;
+
+let z = a * b + c / d;
+console.log(z);
+
+z = c + a * b / d;
+console.log( z );
+
+z= (c + a) * b / c;
+console.log(z);
+//PRECEDENCIA DE OPERADORES
+
+//OPERADORES DE COMPARACION
+let a = 3, b = 2, c = "3";
+
+let z = a == c;
+console.log(z);
+
+z = a === c;
+console.log(z);
+//OPERADORES DE COMPARACION
+
+//OPERADORES DE DIFERENCIA
+let a = 3, b = 2, c = 3;
+
+let z = a != c;
+console.log(z);
+
+z = a !== c;
+console.log(z);
+//OPERADORES DE DIFERENCIA
+
+//OPERADOR AND
+let a = 15;
+let valMIN = 0, valMax = 10;
+
+if( a >= valMin && a <= valMax ){
+    console.log("Dentro de rango");
+    }
+else{
+    console.log("Fuera de rango");
+}
+//OPERADOR AND
+
+//OPERADOR OR
+let vacaciones = false, diaDescanso = true;
+if( vacaciones || diaDescanso ){
+    console.log("Padre puede asistir al juego del hijo");
+}
+else{
+    console.log("El padre esta ocupado");
+}
+//OPERADOR OR
+
+//FUNCION NaN
+let miNumero = "17";
+
+let edad = Number(miNumero); 
+console.log( edad );
+
+if( isNaN(edad)){ 
+    console.log("No es un número");
+}
+else{
+    if(edad >= 18){
+        console.log("Puede votar");
+    }
+    else{
+        console.log("Muy joven para votar");
+    }
+}
+if( isNaN(edad)){
+    console.log("No es un número");
+}
+else{
+    let resultado = (edad >= 18)? "Puede votar": "Muy joven para votar"; 
+    console.log(resultado );
+}
+//FUNCION NaN
+
+//CONDICIONAL IF
+let numero = 2;
+
+if( numero == 1 ){
+    console.log("Número uno");
+}
+else if( numero == 2){ 
+    console.log("Número dos");
+}
+else if( numero == 3 ){ 
+    console.log("Número tres");
+}
+else if( numero == 4 ){ 
+    console.log("Número cuatro");
+}
+else{
+    console.log("Número desconocido");
+}
+//CONDICIONAL IF
+
+//CONDICIONAL SWITCH
+let numero = 1;
+
+let numeroTexto ='Valor desconocido';
+
+switch( numero ){
+    case 1:
+        numeroTexto = "Número uno";
+        break;
+    case 2:
+        numeroTexto ="Número dos";
+        break;
+    case 3:
+        numeroTexto ='Número tres';
+        break
+    case 4:
+        numeroTexto ="Número cuatro";
+        break;
+    default:
+        numeroTexto = "Caso no encontrado";
+}
+
+console.log(numeroTexto);
+//CONDICIONAL SWITCH
+
+//CICLO WHILE
+let contador = 0;
+
+while( contador < 3 ){
+    console.log(contador);
+    contador++;
+}
+console.log("Fin ciclo while");
+//CICLO WHILE
+
+//CICLO FOR
+for(let contador = 0; contador < 3; contador++ ){
+    console.log(contador);
+}
+console.log("Fin ciclo for");
+//CICLO FOR
+
+//ARREGLOS EN JAVASCRIPT
+const autos =["BMW","Mercedes Benz","Volvo"];
+console.log(autos);
+//ARREGLOS EN JAVASCRIPT
+
+//ACCEDIENDO A ELEMENTO DE UN ARRAY
+const autos =["BMW","Mercedes Benz","Volvo"];
+console.log(autos);
+
+console.log(autos[0]);
+console.log(autos[2]);
+
+for(let i=0 ; i<autos.length; i++){
+    console.log(i+" : "+autos[i] );
+}
+//ACCEDIENDO A ELEMENTO DE UN ARRAY
+
+//MODIFICANDO VALORES DE UN ARRAY
+const autos =["BMW","Mercedes Benz","Volvo"];
+console.log(autos);
+
+console.log(autos[0]);
+console.log(autos[2]);
+
+for(let i=0 ; i<autos.length; i++){
+    console.log(i+" : "+autos[i] );
+}
+
+autos[1]= "MerecedesBenz";
+console.log(autos[1]);
+
+autos.push("Audi");
+console.log(autos);
+//MODIFICANDO VALORES DE UN ARRAY
+
+//AGREGANDO ELEMENTOS A UN ARRAY
+const autos =["BMW","Mercedes Benz","Volvo"];
+console.log(autos);
+
+console.log(autos[0]);
+console.log(autos[2]);
+
+for(let i=0 ; i<autos.length; i++){
+    console.log(i+" : "+autos[i] );
+}
+
+autos[1]= "MerecedesBenz";
+console.log(autos[1]);
+
+autos.push("Audi");
+console.log(autos);
+
+console,log(autos.length);
+autos[autos.length]="Cadillac";
+
+console.log(autos);
+
+autos[6] = "Porshe";
+console.log(autos);
+//AGREGANDO ELEMENTOS A UN ARRAY
+
+//PREGUNTAR SI ES UN ARREGLO
+const autos =["BMW","Mercedes Benz","Volvo"];
+console.log(autos);
+
+console.log(autos[0]);
+console.log(autos[2]);
+
+for(let i=0 ; i<autos.length; i++){
+    console.log(i+" : "+autos[i] );
+}
+
+autos[1]= "MerecedesBenz";
+console.log(autos[1]);
+
+autos.push("Audi");
+console.log(autos);
+
+console,log(autos.length);
+autos[autos.length]="Cadillac";
+
+console.log(autos);
+
+autos[6] = "Porshe";
+console.log(autos);
+
+console.log(typeof autos);
+
+console.log( Array.isArray(autos) );
+
+console.log( autos instanceof Array);

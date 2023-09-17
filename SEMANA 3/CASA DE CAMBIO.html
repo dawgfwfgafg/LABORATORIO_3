@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Casa de Cambio</title>
+    <script>
+        function calcularCambio() {
+            // Obtiene el valor seleccionado para la moneda de origen
+            var monedaOrigen = document.getElementById("monedaOrigen").value;
+
+            // Obtiene el valor seleccionado para la moneda de destino
+            var monedaDestino = document.getElementById("monedaDestino").value;
+
+            // Obtiene el monto a cambiar
+            var monto = parseFloat(document.getElementById("monto").value);
+
+            // Define las tasas de cambio (sustituye con las tasas reales)
+            var tasasCambio = {
+                'dolar': {
+                    'soles': 3.75,
+                    'euros': 0.85
+                },
+                'soles': {
+                    'dolar': 0.27,
+                    'euros': 0.23
+                },
+                'euros': {
+                    'dolar': 1.18,
+                    'soles': 4.33
+                }
+            };
+
+            // Calcula el total en función de las tasas de cambio
+            var total = monto * tasasCambio[monedaOrigen][monedaDestino];
+
+            // Muestra el total en una alerta
+            alert("Total a recibir: " + total.toFixed(2) + " " + monedaDestino);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Casa de Cambio</h1>
+    <form>
+        <label for="monedaOrigen">Moneda de Origen:</label>
+        <select id="monedaOrigen">
+            <option value="dolar">Dólar</option>
+            <option value="soles">Soles</option>
+            <option value="euros">Euros</option>
+        </select>
+        <br>
+        <label for="monedaDestino">Moneda de Destino:</label>
+        <select id="monedaDestino">
+            <option value="dolar">Dólar</option>
+            <option value="soles">Soles</option>
+            <option value="euros">Euros</option>
+        </select>
+        <br>
+        <label for="monto">Monto a Cambiar:</label>
+        <input type="number" id="monto" step="0.01">
+        <br>
+        <button type="button" onclick="calcularCambio()">Calcular Cambio</button>
+    </form>
+</body>
+
+</html>
